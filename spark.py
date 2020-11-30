@@ -41,6 +41,10 @@ for f in os.listdir(path): #marche comme un ls, ici le f représerente mes fichi
         #taux_Chomage_par_Etat.collect()
         
         #################### ELhadj ###################################
+        #Comparaison chomeurs homme/femme
+        ouvrierF = df.filter(df["sex"]=="female")
+        ouvrierF.count()
+        
 
         #comparaison nb H vs F
         # res.repartition(1).write.csv("./data/result/sex"+name)
