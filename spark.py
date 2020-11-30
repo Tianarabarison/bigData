@@ -38,9 +38,12 @@ for f in os.listdir(path): #marche comme un ls, ici le f représerente mes fichi
 
         #Taux de chommage par etat en pourcentage 
         taux_Chomage_par_Etat = df.groupBy("state").agg({"stateur" : "max"})
-        taux_Chomage_par_Etat.collect()
+        #taux_Chomage_par_Etat.collect()
         
         #################### ELhadj ###################################
+        #comparaison homme/femme
+        ouvrierF = df.filter(df["sex"]=="female")
+        ouvrierF.count()
 
         #comparaison nb H vs F
         # res.repartition(1).write.csv("./data/result/sex"+name)
